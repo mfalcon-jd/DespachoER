@@ -41,11 +41,11 @@ public class AdminUsuario extends JInternalFrame implements ActionListener
 		this.Modalidad = modalidad;
 		if(Modalidad == "Cambiar")
 		{
-			frmAdminUsuario = new JInternalFrame("Cambiar contraseña",false,true,true,true);
+			frmAdminUsuario = new JInternalFrame("Cambiar contraseï¿½a",false,true,true,true);
 			
-			lblContrasenia = new JLabel("Contraseña:");
-			lblNuevaContrasenia = new JLabel("Nueva Contraseña:");
-			lblConfirmar = new JLabel("Confirmar Contraseña:");
+			lblContrasenia = new JLabel("Contraseï¿½a:");
+			lblNuevaContrasenia = new JLabel("Nueva Contraseï¿½a:");
+			lblConfirmar = new JLabel("Confirmar Contraseï¿½a:");
 			txtxNuevacontrasenia = new JPasswordField(10);
 			txtxNuevacontrasenia.addActionListener(estilos.tranfiereElFoco);
 			
@@ -58,7 +58,7 @@ public class AdminUsuario extends JInternalFrame implements ActionListener
 			
 			lblContrasenia = new JLabel("Nuevo Usuario:");
 			lblNuevaContrasenia = new JLabel("Nuevo Usuario:");
-			lblConfirmar = new JLabel("Contraseña:");
+			lblConfirmar = new JLabel("Contraseï¿½a:");
 			lblTipoUsuario = new JLabel("TipoUsuario:");
 			
 			comboTipoUsuario = new JComboBox();
@@ -153,7 +153,7 @@ public class AdminUsuario extends JInternalFrame implements ActionListener
 		}
 		if(arg0.getSource() == btnAceptar)
 		{
-				if (Modalidad == "Cambiar") cambiarContraseña();
+				if (Modalidad == "Cambiar") cambiarContrasenia();
 				else insertarNuevoUsuario();
 		}
 		
@@ -182,13 +182,13 @@ public class AdminUsuario extends JInternalFrame implements ActionListener
 		
 		
 		if(usuarioNuevo.length() == 0 && contraseniaUsuario.length() == 0)
-			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar Los Datos Completos", "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar Los Datos Completos", "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 		/*else if(contrasenia.length() == 0)
-			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar Contraseña Actual", "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );*/
+			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar Contraseï¿½a Actual", "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );*/
 		else if (usuarioNuevo.length() == 0)
-			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar un Nuevo Usuario", "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar un Nuevo Usuario", "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 		else if (contraseniaUsuario.length() == 0)
-			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe proporcionar Contraseña", "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe proporcionar Contraseï¿½a", "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 		else if(comboTipoUsuario.getSelectedItem() == "---Seleccionar---")
 		 {
 			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Seleccionar un Tipo de Usuario", "Error Agregar Usuario",JOptionPane.ERROR_MESSAGE );
@@ -196,7 +196,7 @@ public class AdminUsuario extends JInternalFrame implements ActionListener
 		 }
 		else if(contraseniaUsuario.length() < 6)
 		 {
-			JOptionPane.showMessageDialog( AdminUsuario.this,"la contraseña debe de ser minimo 6 caracteres", "Error Agregar Usuario",JOptionPane.ERROR_MESSAGE );
+			JOptionPane.showMessageDialog( AdminUsuario.this,"la contraseï¿½a debe de ser minimo 6 caracteres", "Error Agregar Usuario",JOptionPane.ERROR_MESSAGE );
 			return;
 		 }
 		else
@@ -209,24 +209,24 @@ public class AdminUsuario extends JInternalFrame implements ActionListener
 				
 				if (bCambiocontrasenia)
 				{
-					JOptionPane.showMessageDialog( AdminUsuario.this,"el usuario ha sido agregado Correctamente", "Cambio contraseña",JOptionPane.INFORMATION_MESSAGE );
+					JOptionPane.showMessageDialog( AdminUsuario.this,"el usuario ha sido agregado Correctamente", "Cambio contraseï¿½a",JOptionPane.INFORMATION_MESSAGE );
 					limpiaCampos();
 					
 				}
 				else
 				{
-					JOptionPane.showMessageDialog( AdminUsuario.this,"No se pudo agregar al Usuario " + user.getException().getMessage(), "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+					JOptionPane.showMessageDialog( AdminUsuario.this,"No se pudo agregar al Usuario " + user.getException().getMessage(), "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 				}
 			}
 			catch(Exception e)
 			{
-				JOptionPane.showMessageDialog( AdminUsuario.this,"No se pudo agregar al Usuario [1]" + user.getException().getMessage(), "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+				JOptionPane.showMessageDialog( AdminUsuario.this,"No se pudo agregar al Usuario [1]" + user.getException().getMessage(), "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 			}
 		}
 		
 	}
 	
-	public void cambiarContraseña()
+	public void cambiarContrasenia()
 	{
 		DbUsuario user = new DbUsuario();
 		//frmMain principal = new frmMain();
@@ -242,13 +242,13 @@ public class AdminUsuario extends JInternalFrame implements ActionListener
 		
 		
 		if(contraseniaNueva.length() == 0 && confirmarContrasenia.length() == 0)
-			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar Los Datos Completos", "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar Los Datos Completos", "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 		/*else if(contrasenia.length() == 0)
-			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar Contraseña Actual", "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );*/
+			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar Contraseï¿½a Actual", "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );*/
 		else if (contraseniaNueva.length() == 0)
-			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar Contraseña Nueva", "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe Proporcionar Contraseï¿½a Nueva", "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 		else if (confirmarContrasenia.length() == 0)
-			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe confirmar Contraseña", "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+			JOptionPane.showMessageDialog( AdminUsuario.this,"Debe confirmar Contraseï¿½a", "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 		else
 		{
 			try 
@@ -256,22 +256,22 @@ public class AdminUsuario extends JInternalFrame implements ActionListener
 				//contrasenia = StringMD.getStringMessageDigest(txtContrasenia.getText().trim(), StringMD.SHA1); 
 				confirmarContrasenia = StringMD.getStringMessageDigest(txtxConfircontrasenia.getText().trim(), StringMD.SHA1);
 				System.out.println("sin cifrar " + frmLogin.clave +  "nueva " + contrasenia);
-				System.out.println("contraseña nueva  " + contraseniaNueva);
-				System.out.println("confirmar contraseña " + confirmarContrasenia);
+				System.out.println("contraseï¿½a nueva  " + contraseniaNueva);
+				System.out.println("confirmar contraseï¿½a " + confirmarContrasenia);
 				
 				/*if(frmLogin.clave.equals(contrasenia))
 				{
-					JOptionPane.showMessageDialog( AdminUsuario.this,"La Contraseña Actual no es Correcta, favor de verifcar", "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+					JOptionPane.showMessageDialog( AdminUsuario.this,"La Contraseï¿½a Actual no es Correcta, favor de verifcar", "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 					return;
 				}					
 				else*/ if(contraseniaNueva.equals(confirmarContrasenia ))
 				{
-					JOptionPane.showMessageDialog( AdminUsuario.this,"La Contraseña Nueva no coincide", "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+					JOptionPane.showMessageDialog( AdminUsuario.this,"La Contraseï¿½a Nueva no coincide", "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 					return;
 				}					 
 				else if(contraseniaNueva.length() < 6)
 				{
-					JOptionPane.showMessageDialog( AdminUsuario.this,"La Contraseña debe de ser Minimo de 6 caracteres", "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+					JOptionPane.showMessageDialog( AdminUsuario.this,"La Contraseï¿½a debe de ser Minimo de 6 caracteres", "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 					return;
 				}
 				
@@ -284,20 +284,20 @@ public class AdminUsuario extends JInternalFrame implements ActionListener
 				
 				if (bCambiocontrasenia)
 				{
-					JOptionPane.showMessageDialog( AdminUsuario.this,"La Contraseña ha sido Cambiada Correctamente", "Cambio contraseña",JOptionPane.INFORMATION_MESSAGE );
+					JOptionPane.showMessageDialog( AdminUsuario.this,"La Contraseï¿½a ha sido Cambiada Correctamente", "Cambio contraseï¿½a",JOptionPane.INFORMATION_MESSAGE );
 					limpiaCampos();
 					frmLogin.clave = contraseniaNueva;
 				}
 				else
 				{
-					JOptionPane.showMessageDialog( AdminUsuario.this,"No se pudo actualizar la Contraseña " + user.getException().getMessage(), "Error Cambio contraseña",JOptionPane.ERROR_MESSAGE );
+					JOptionPane.showMessageDialog( AdminUsuario.this,"No se pudo actualizar la Contraseï¿½a " + user.getException().getMessage(), "Error Cambio contraseï¿½a",JOptionPane.ERROR_MESSAGE );
 				}
 				
 			}
 			catch(Exception e){
 				JOptionPane.showMessageDialog( AdminUsuario.this,
-						"No se ha podido Actualizar la contraseña " + e.getMessage(),
-						"Error de Cambio Contraseña", JOptionPane.ERROR_MESSAGE );
+						"No se ha podido Actualizar la contraseï¿½a " + e.getMessage(),
+						"Error de Cambio Contraseï¿½a", JOptionPane.ERROR_MESSAGE );
 			}						
 		}
 	}

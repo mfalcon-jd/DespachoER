@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 
 public class Fecha extends JLabel implements Runnable
 {
-	private String dia, mes, año, hora, minutos, segundos, fecha;
+	private String dia, mes, anio, hora, minutos, segundos, fecha;
 	private Calendar calendario = new GregorianCalendar();
 	Thread hilo;
 	
@@ -29,7 +29,7 @@ public class Fecha extends JLabel implements Runnable
 		segundos = calendario.get(Calendar.SECOND) > 9 ? "" + calendario.get(Calendar.SECOND) : "0" + calendario.get(Calendar.SECOND);
 		dia = calendario.get(Calendar.DATE) > 9 ? "" + calendario.get(Calendar.DATE) : "0" + calendario.get(Calendar.DATE);
 		mes = calendario.get(Calendar.MONTH) > 9 ? "" + calendario.get(Calendar.MONTH) : "0" + calendario.get(Calendar.MONTH);
-		año = calendario.get(Calendar.YEAR) > 9 ? "" + calendario.get(Calendar.YEAR) : "0" + calendario.get(Calendar.YEAR);
+		anio = calendario.get(Calendar.YEAR) > 9 ? "" + calendario.get(Calendar.YEAR) : "0" + calendario.get(Calendar.YEAR);
 		
 		DateFormat df = DateFormat.getDateInstance(DateFormat.FULL);
 		fecha = df.format(fechaHoraActual);
@@ -47,7 +47,7 @@ public class Fecha extends JLabel implements Runnable
 				String sFecha;
 				mesE = Integer.valueOf(mes) + 1;
 				
-				//setText(dia + "/" + mes + "/" + año + "       " + hora + ":" + minutos + ":" + segundos);
+				//setText(dia + "/" + mes + "/" + aï¿½o + "       " + hora + ":" + minutos + ":" + segundos);
 				sFecha = fecha.substring(0, 1).toUpperCase() + fecha.substring(1);
 				setText( sFecha + "         " + hora + ":" + minutos + ":" + segundos);
 				Thread.sleep(1000);

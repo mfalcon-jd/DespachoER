@@ -5,6 +5,7 @@
 
 # Packages
 /.settings/
+/bin/
 
 #logs
 
