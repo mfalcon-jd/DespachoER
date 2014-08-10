@@ -1,0 +1,16 @@
+# Compiled #
+.project
+.classpath
+
+
+# Packages
+/.settings/
+
+#logs
+
+
+#Translations
+
+#Django media files
+
+

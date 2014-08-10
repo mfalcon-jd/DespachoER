@@ -1,0 +1,9 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+private SimpleDateFormat formato;
+private Date convertirfecha;
+
+SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+Date date = cal.getDate();
+String fecha = formato.format(date);
