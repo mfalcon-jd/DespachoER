@@ -97,11 +97,11 @@ public class frmLogin extends JFrame implements ActionListener
 					clave = txtpassword.getText().trim();
 					
 					if(usuario.length() == 0 && clave.length() == 0)
-						JOptionPane.showMessageDialog( frmLogin.this,"Debe Proporcionar usuario y Contraseña", "Error Loguin",JOptionPane.INFORMATION_MESSAGE );
+						JOptionPane.showMessageDialog( frmLogin.this,"Debe Proporcionar usuario y Contraseï¿½a", "Error Loguin",JOptionPane.INFORMATION_MESSAGE );
 					else if(usuario.length() == 0)
 						JOptionPane.showMessageDialog( frmLogin.this,"Debe Proporcionar usuario", "Error Loguin",JOptionPane.INFORMATION_MESSAGE );
 					else if (clave.length() == 0)
-						JOptionPane.showMessageDialog( frmLogin.this,"Debe Proporcionar Contraseña", "Error Loguin",JOptionPane.INFORMATION_MESSAGE );
+						JOptionPane.showMessageDialog( frmLogin.this,"Debe Proporcionar Contraseï¿½a", "Error Loguin",JOptionPane.INFORMATION_MESSAGE );
 					else
 					{
 						try {
@@ -127,7 +127,7 @@ public class frmLogin extends JFrame implements ActionListener
 						}
 						catch(Exception e){
 							JOptionPane.showMessageDialog( frmLogin.this,
-									"Usuario o contraseña incorrecto",
+									"Usuario o contraseï¿½a incorrecto",
 									"Error de Loguin", JOptionPane.ERROR_MESSAGE );
 						}						
 					}					
@@ -173,11 +173,11 @@ public class frmLogin extends JFrame implements ActionListener
 			clave = StringMD.getStringMessageDigest(txtpassword.getText().trim(), StringMD.SHA1);
 			
 			if(usuario.length() == 0 && clave.length() == 0)
-				JOptionPane.showMessageDialog( frmLogin.this,"Debe Proporcionar usuario y Contraseña", "Error Loguin",JOptionPane.INFORMATION_MESSAGE );
+				JOptionPane.showMessageDialog( frmLogin.this,"Debe Proporcionar usuario y Contraseï¿½a", "Error Loguin",JOptionPane.INFORMATION_MESSAGE );
 			else if(usuario.length() == 0)
 				JOptionPane.showMessageDialog( frmLogin.this,"Debe Proporcionar usuario", "Error Loguin",JOptionPane.INFORMATION_MESSAGE );
 			else if (clave.length() == 0)
-				JOptionPane.showMessageDialog( frmLogin.this,"Debe Proporcionar Contraseña", "Error Loguin",JOptionPane.INFORMATION_MESSAGE );
+				JOptionPane.showMessageDialog( frmLogin.this,"Debe Proporcionar Contraseï¿½a", "Error Loguin",JOptionPane.INFORMATION_MESSAGE );
 			else
 			{
 				try {
@@ -207,7 +207,7 @@ public class frmLogin extends JFrame implements ActionListener
 				catch(Exception e)
 				{
 					JOptionPane.showMessageDialog( frmLogin.this,
-							"Usuario o contraseña incorrecto " + e.getMessage(),
+							"Usuario o contraseï¿½a incorrecto " + e.getMessage(),
 							"Error de Loguin", JOptionPane.ERROR_MESSAGE );
 				}						
 			}	

@@ -32,7 +32,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.NumberFormatter;
 import com.codeko.util.Num;
-import com.crystaldecisions.sdk.occa.report.lib.ReportSDKException;
+//import com.crystaldecisions.sdk.occa.report.lib.ReportSDKException;
 
 import bd.DBConsultarTramite;
 import bd.DbActualizarTramite;
@@ -116,22 +116,22 @@ public class guiPagos extends JInternalFrame implements ActionListener
 	
 	public JFormattedTextField formatoText(JFormattedTextField textField)
 	{
-		// Formato de visualización
+		// Formato de visualizaciï¿½n
     	NumberFormat dispFormat = NumberFormat.getCurrencyInstance(Locale.getDefault());
-    	// Formato de edición: inglés (separador decimal: el punto)
+    	// Formato de ediciï¿½n: inglï¿½s (separador decimal: el punto)
     	NumberFormat editFormat =
     	                NumberFormat.getNumberInstance(Locale.getDefault());
     	
-    	// Para la edición, no queremos separadores de millares
+    	// Para la ediciï¿½n, no queremos separadores de millares
     	editFormat.setGroupingUsed(false);
-    	// Creamos los formateadores de números
+    	// Creamos los formateadores de nï¿½meros
     	NumberFormatter dnFormat = new NumberFormatter(dispFormat);
     	NumberFormatter enFormat = new NumberFormatter(editFormat);enFormat.setOverwriteMode(true);
-    	// Creamos la factoría de formateadores especificando los
-    	// formateadores por defecto, de visualización y de edición
+    	// Creamos la factorï¿½a de formateadores especificando los
+    	// formateadores por defecto, de visualizaciï¿½n y de ediciï¿½n
     	DefaultFormatterFactory currFactory = new DefaultFormatterFactory(dnFormat, dnFormat, enFormat);
     	
-    	// Asignamos la factoría al campo
+    	// Asignamos la factorï¿½a al campo
     	textField = new JFormattedTextField();
     	textField.setValue(new Float("00.00"));
     	//enFormat.setMaximum(10);
@@ -499,7 +499,7 @@ public class guiPagos extends JInternalFrame implements ActionListener
 		{
 			for(iCuenta = 0; iCuenta < vConsultaCliente.length; iCuenta++ )
 			{
-				System.out.println("y¿tamaño columna " + vConsultaCliente[iCuenta].length);
+				System.out.println("yï¿½tamaï¿½o columna " + vConsultaCliente[iCuenta].length);
 				for(int iCuentaAux = 0; iCuentaAux < vConsultaCliente[iCuenta].length;iCuentaAux++)
 				{
 					System.out.println("Dato de Cuenta " + iCuenta + " dato " + iCuentaAux + " Valor " + vConsultaCliente[iCuenta][iCuentaAux].toString());
@@ -644,7 +644,7 @@ public class guiPagos extends JInternalFrame implements ActionListener
 			int iContador = vConsultaTramite.length;
 			/*for(iCuenta = 0; iCuenta < vConsultaTramite.length; iCuenta++ )
 			{
-				System.out.println("y¿tamaño columna " + vConsultaTramite[iCuenta].length);
+				System.out.println("yï¿½tamaï¿½o columna " + vConsultaTramite[iCuenta].length);
 				for(int iCuentaAux = 0; iCuentaAux < vConsultaTramite[iCuenta].length;iCuentaAux++)
 				{
 					System.out.println("Dato de Cuenta " + iCuenta + " dato " + iCuentaAux + " Valor " + vConsultaTramite[iCuenta][iCuentaAux].toString());

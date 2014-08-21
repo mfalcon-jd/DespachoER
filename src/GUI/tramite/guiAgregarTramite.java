@@ -35,7 +35,8 @@ import bd.DbActualizarTramite;
 import bd.DbConsultar;
 import bd.DbInsertarEstadoCuenta;
 
-import com.ibm.icu.text.NumberFormat;
+//import com.ibm.icu.text.NumberFormat;
+import java.text.NumberFormat;
 
 
 import conexion.Conexion;
@@ -235,7 +236,7 @@ public class guiAgregarTramite extends JInternalFrame implements ActionListener{
 			File directorio = new File(Carpeta +"/"+  vConsultaEtapas[iCuenta][1].toString() +"_" + vConsultaEtapas[iCuenta][2].toString()); 
 			directorio.mkdirs();
 			
-			System.out.println("y¿tamaño columna " + vConsultaEtapas[iCuenta].length);
+			System.out.println("yï¿½tamaï¿½o columna " + vConsultaEtapas[iCuenta].length);
 			for(int iCuentaAux = 0; iCuentaAux < vConsultaEtapas[iCuenta].length;iCuentaAux++)
 			{
 				
